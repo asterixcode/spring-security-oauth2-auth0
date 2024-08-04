@@ -1,0 +1,17 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          auth0:
+            client-id: ${auth0-client-id}
+            client-secret: ${auth0-client-secret}
+            scope:
+              - openid
+              - profile
+              - email
+            #redirect-uri: "${baseUrl}/login/oauth2/code/${registrationId}"
+            #client-name: Auth0
+        provider:
+          auth0:
+            issuer-uri: https://${auth0-domain}/
